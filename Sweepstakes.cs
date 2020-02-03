@@ -10,6 +10,7 @@ namespace Sweepstakes
     {
         //MEMBER VARIABLES (SWEEPSTAKES HAS A..)
         Dictionary<int, Contestant> contestants = new Dictionary<int, Contestant>();
+        int incrementer = 0;
         string name;
         public string Name
         {
@@ -27,25 +28,34 @@ namespace Sweepstakes
         {
             this.name = name;
         }
-        public int GenerateRandomNumber(int maxValue)
+        public int GenerateRandomNumber(int incrementer)
         {
             Random random = new Random();
-            int randomNumber = random.Next(maxValue);
+            int randomNumber = random.Next(incrementer);
             return randomNumber;
         }
         //MEMBER METHODS (SWEEPSTAKES CAN DO..)
         public void RegisterContestant(Contestant contestant)
         {
+            Contestant newContestant = new Contestant();
 
+            newContestant.FirstName = UserInterface.GetUserInput("Enter first name");
+            newContestant.LastName = UserInterface.GetUserInput("Enter last name");
+            newContestant.EmailAddress = UserInterface.GetUserInput("Enter email address");
+            newContestant.RegistrationNumber = incrementer;
+
+            contestants.Add(incrementer, newContestant);
+            incrementer++;
         }
-        public Contestant PickWinner ()
+        public Contestant PickAWinner ()
         {
             //RANDOMLY CHOOSE WINNER FROM DICTIONARY//
-            int randomWinner = GenerateRandomNumber(500);
+            int randomWinner = GenerateRandomNumber(incrementer);
+            return randomWinner;
         }
         public void PrintContestantInfo(Contestant contestant)
         {
-
+            //Console.WriteLine(contestant information)//
         }
     }
 }
