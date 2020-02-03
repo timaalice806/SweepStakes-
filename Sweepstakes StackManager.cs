@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Sweepstakes
 {
-    class Sweepstakes_StackManager
+    class Sweepstakes_StackManager : ISweepstakes_Manager
     {
         //MEMBER VARIABLES (STACK MANAGER HAS A..)
-        Stack<Sweepstakes> stack;
+        Stack<Sweepstakes> stack = new Stack<Sweepstakes>();
     }
 }

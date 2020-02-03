@@ -8,6 +8,18 @@ namespace Sweepstakes
 {
     public static class UserInterface
     {
-       
+       public static Contestant AddContestant ()
+        {
+            Contestant newContestant = new Contestant(string, string, string, int);
+
+            newContestant.FirstName =
+            newContestant.LastName =
+            newContestant.EmailAddress =
+            newContestant.RegistrationNumber =
+
+
+
+
+        }
     }
 }
