@@ -8,5 +8,7 @@ namespace Sweepstakes
 {
     class Sweepstakes_StackManager
     {
+        //MEMBER VARIABLES (STACK MANAGER HAS A..)
+        Stack<Sweepstakes> stack;
     }
 }

@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace Sweepstakes
 {
-    class Simulation
+    public static class UserInterface
     {
-        public void CreateMarketingFirmWithManager()
-        {
-
-        }
+       
     }
 }
