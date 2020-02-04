@@ -16,8 +16,7 @@ namespace Sweepstakes
             Stack<Sweepstakes> stack = new Stack<Sweepstakes>();
 
             stack.Push(sweepstakes);
-            Console.WriteLine("Sweepstakes in this stack are");
-            Console.ReadLine();
+            UserInterface.GetUserInput("Enter name of sweepstakes");
         }
         public Sweepstakes GetSweepstakes()
         {

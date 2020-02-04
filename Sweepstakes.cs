@@ -47,15 +47,22 @@ namespace Sweepstakes
             contestants.Add(incrementer, newContestant);
             incrementer++;
         }
-        public Contestant PickAWinner ()
+        public int PickAWinner ()
         {
             //RANDOMLY CHOOSE WINNER FROM DICTIONARY//
             int randomWinner = GenerateRandomNumber(incrementer);
             return randomWinner;
         }
-        public void PrintContestantInfo(Contestant contestant)
-        {
-            //Console.WriteLine(contestant information)//
+        public void PrintContestantInfo()
+        { 
+            Console.WriteLine("Enter the contestant(s) you would like to print: ");
+            string input = Console.ReadLine();
+
+            foreach (KeyValuePair<int, Contestant> contestant in contestants)
+                if(contestant.Value.FirstName == input)
+                {
+                    Console.WriteLine($"Contestant information: {contestant.Value}" );
+                }
         }
     }
 }

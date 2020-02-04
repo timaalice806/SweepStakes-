@@ -16,14 +16,11 @@ namespace Sweepstakes
             Queue<Sweepstakes> queue = new Queue<Sweepstakes>();
 
             queue.Enqueue(sweepstakes);
-            Console.WriteLine("Sweepstakes in queue are: ");
-            Console.ReadLine();
+            UserInterface.GetUserInput("Enter name of sweepstakes");
         }
         public Sweepstakes GetSweepstakes()
         {
             return queue.Dequeue();
-            //RETURN A SWEEPSTAKES//
         }
-
     }
 }

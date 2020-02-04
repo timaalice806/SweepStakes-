@@ -13,10 +13,5 @@ namespace Sweepstakes
             Console.WriteLine(output);
             return Console.ReadLine();
        }
-       public static string GetManagerInput(string output)
-       {
-            Console.WriteLine("Entername of sweepstakes");
-            return Console.ReadLine();
-        }
     }
 }
